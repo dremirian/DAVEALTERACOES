@@ -57,7 +57,7 @@ function App() {
       color: 'from-orange-500 to-orange-600',
       isDownload: true,
       onDownload: handleDownloadHealthCheck
-    }
+    },
     {
       icon: FileText,
       title: 'Health Check Postgres',
