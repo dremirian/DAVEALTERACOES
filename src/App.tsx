@@ -67,7 +67,7 @@ function App() {
       isExternal: true
     },
     {
-      icon: FileText,
+      icon: Database,
       title: 'Health Check PostgreSQL',
       description: 'Modelo em Word para documentar fases de implantação, escopo técnico, cronograma e riscos.',
       link: null,
