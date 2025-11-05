@@ -58,6 +58,15 @@ function App() {
       isDownload: true,
       onDownload: handleDownloadHealthCheck
     }
+    {
+      icon: FileText,
+      title: 'Health Check Postgres',
+      description: 'Modelo em Word para documentar fases de implantação, escopo técnico, cronograma e riscos.',
+      link: null,
+      color: 'from-orange-500 to-orange-600',
+      isDownload: true,
+      onDownload: handleDownloadHealthCheck
+    }
   ];
 
   const comingSoon = [
