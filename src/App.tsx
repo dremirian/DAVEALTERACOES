@@ -34,7 +34,7 @@ function App() {
 
   const tools = [
     {
-      icon: calendar-clock,
+      icon: calendar,
       title: 'Estimador de Migração SQL Server',
       description: 'Planeje e estime projetos de migração com base em discos, instâncias e bancos de dados.',
       link: 'https://relatoriomigracao.vercel.app/',
