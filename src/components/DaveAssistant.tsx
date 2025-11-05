@@ -1,8 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
-import { MessageCircle, X, Send, ThumbsUp, ThumbsDown, Bot, User, Sparkles, RotateCcw, ExternalLink } from 'lucide-react';
+import { MessageCircle, X, Send, ThumbsUp, ThumbsDown, User, Sparkles, RotateCcw, ExternalLink } from 'lucide-react';
 import { ConversationService } from '../services/conversationService';
 import { Message } from '../types/conversation';
 import { getRandomSuggestions } from '../data/knowledgeBase';
+import DAVELOGO from '../img/DAVELOGO.png';
 
 const conversationService = new ConversationService();
 
@@ -153,7 +154,7 @@ export function DaveAssistant() {
           <div className="bg-gradient-to-r from-cyan-500 to-cyan-600 p-4 flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="relative">
-                <Bot className="w-8 h-8 text-white" />
+                <img src={DAVELOGO} alt="DAVE" className="w-8 h-8 object-contain" />
                 <span className="absolute -bottom-1 -right-1 w-3 h-3 bg-green-400 rounded-full border-2 border-cyan-600" />
               </div>
               <div>
@@ -183,8 +184,8 @@ export function DaveAssistant() {
               <div key={message.id} className={`flex gap-3 ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                 {message.role === 'assistant' && (
                   <div className="flex-shrink-0">
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-cyan-500 to-cyan-600 flex items-center justify-center">
-                      <Bot className="w-5 h-5 text-white" />
+                    <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center p-1">
+                      <img src={DAVELOGO} alt="DAVE" className="w-full h-full object-contain" />
                     </div>
                   </div>
                 )}
@@ -240,8 +241,8 @@ export function DaveAssistant() {
             {isTyping && (
               <div className="flex gap-3 justify-start">
                 <div className="flex-shrink-0">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-cyan-500 to-cyan-600 flex items-center justify-center">
-                    <Bot className="w-5 h-5 text-white" />
+                  <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center p-1">
+                    <img src={DAVELOGO} alt="DAVE" className="w-full h-full object-contain" />
                   </div>
                 </div>
                 <div className="bg-slate-800 rounded-2xl p-3 border border-slate-700">
