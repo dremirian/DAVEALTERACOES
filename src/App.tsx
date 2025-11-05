@@ -58,9 +58,17 @@ function App() {
       isDownload: true,
       onDownload: handleDownloadHealthCheck
     },
+     {
+      icon: Database,
+      title: 'Conversor de scripts SQL Server → PostgreSQL',
+      description: 'Facilite na migração entre SQL Server → PostgreSQL',
+      link: 'em breve',
+      color: 'from-blue-500 to-blue-600',
+      isExternal: true
+    },
     {
       icon: FileText,
-      title: 'Health Check Postgres',
+      title: 'Health Check PostgreSQL',
       description: 'Modelo em Word para documentar fases de implantação, escopo técnico, cronograma e riscos.',
       link: null,
       color: 'from-orange-500 to-orange-600',
