@@ -107,11 +107,11 @@ function App() {
         </div>
 
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 flex items-center">
+          <h2 className="text-3xl font-bold text-white mb-8 flex items-center text-left">
             <Database className="w-8 h-8 mr-3 text-cyan-400" />
             Ferramentas Disponíveis
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
             {tools.map((tool, index) => {
               const Icon = tool.icon;
               const Component = tool.isDownload ? 'button' : 'a';
