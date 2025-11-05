@@ -34,7 +34,7 @@ function App() {
 
   const tools = [
     {
-      icon: calendar,
+      icon: Database,
       title: 'Estimador de Migração SQL Server',
       description: 'Planeje e estime projetos de migração com base em discos, instâncias e bancos de dados.',
       link: 'https://relatoriomigracao.vercel.app/',
@@ -52,23 +52,6 @@ function App() {
     {
       icon: FileText,
       title: 'Health Check SQL Server',
-      description: 'Modelo em Word para documentar fases de implantação, escopo técnico, cronograma e riscos.',
-      link: null,
-      color: 'from-orange-500 to-orange-600',
-      isDownload: true,
-      onDownload: handleDownloadHealthCheck
-    },
-     {
-      icon: Database,
-      title: 'Conversor de scripts SQL Server → PostgreSQL',
-      description: 'Facilite na migração entre SQL Server → PostgreSQL',
-      link: 'em breve',
-      color: 'from-blue-500 to-blue-600',
-      isExternal: true
-    },
-    {
-      icon: FileText,
-      title: 'Health Check PostgreSQL',
       description: 'Modelo em Word para documentar fases de implantação, escopo técnico, cronograma e riscos.',
       link: null,
       color: 'from-orange-500 to-orange-600',
@@ -107,11 +90,11 @@ function App() {
         </div>
 
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 flex items-center text-left">
+          <h2 className="text-3xl font-bold text-white mb-8 flex items-center">
             <Database className="w-8 h-8 mr-3 text-cyan-400" />
             Ferramentas Disponíveis
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {tools.map((tool, index) => {
               const Icon = tool.icon;
               const Component = tool.isDownload ? 'button' : 'a';
