@@ -33,44 +33,6 @@ function App() {
       window.open(docUrl, '_blank');
     }
   };
-function App() {
-  const handleDownloadHealthCheckPostgres = async () => {
-    const docId = '1Xs18pGBtb9qCeiZnI3uFlrAhdX_MQ4i7';
-    const url = `https://docs.google.com/document/d/${docId}/export?format=docx`;
-
-    try {
-      const response = await fetch(url, {
-        method: 'GET',
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-        }
-      });
-
-      if (!response.ok) throw new Error('Download failed');
-
-      const blob = await response.blob();
-      const downloadUrl = window.URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = downloadUrl;
-      a.download = 'Health_Check_PostgreSQL.docx';
-      document.body.appendChild(a);
-      a.click();
-      window.URL.revokeObjectURL(downloadUrl);
-      document.body.removeChild(a);
-    } catch (error) {
-      const docUrl = `https://docs.google.com/document/d/${docId}/edit?usp=drive_link`;
-      window.open(docUrl, '_blank');
-    }
-  };
-
-  return (
-    <div>
-      <button onClick={handleDownloadHealthCheckPostgres}>
-        Download Health Check PostgreSQL
-      </button>
-    </div>
-  );
-}
 
   const tools = [
     {
@@ -121,7 +83,7 @@ function App() {
       link: null,
         color: 'from-yellow-500 to-yellow-600',
       isDownload: true,
-      onDownload: handleDownloadHealthCheckPostgres
+      onDownload: handleDownloadHealthCheck
     }
   ];
 
@@ -212,7 +174,23 @@ function App() {
           </div>
         </div>
 
-       
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-white mb-8 flex items-center">
+            <Activity className="w-8 h-8 mr-3 text-cyan-400" />
+            Em Breve no DAVE
+          </h2>
+          <div className="bg-slate-800 rounded-xl p-8 border border-slate-700">
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {comingSoon.map((item, index) => (
+                <li key={index} className="flex items-center text-gray-300">
+                  <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
         <div className="text-center">
           <div className="bg-slate-800 rounded-xl p-8 border border-slate-700">
             <h2 className="text-2xl font-bold text-white mb-4">Sobre o DAVE</h2>
