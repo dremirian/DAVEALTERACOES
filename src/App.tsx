@@ -69,7 +69,7 @@ function App() {
       <button onClick={handleDownloadHealthCheckPostgres}>Download Health Check PostgreSQL</button>
     </div>
   );
-}
+};
 
 
   const tools = [
