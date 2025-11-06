@@ -179,7 +179,7 @@ function App() {
             <Activity className="w-8 h-8 mr-3 text-cyan-400" />
             Em Breve no DAVE
           </h2>
-          
+          lalala
         </div>
 
         <div className="text-center">
