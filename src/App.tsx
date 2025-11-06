@@ -85,7 +85,7 @@ function App() {
           </p>
 
           <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-            Painel multifuncional para administração, análise e migração de bancos de dados, uma central inteligente e ágil para DBAs.
+            Administre melhor, analise mais, evolua sempre..
           </p>
         </div>
 
