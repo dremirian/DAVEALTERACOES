@@ -39,7 +39,7 @@ function App() {
       icon: Activity,
       title: 'Analisador de Performance SQL Server',
       description: 'Compare estatísticas antes e depois da otimização de queries. Ideal para validar melhorias em tempo de execução e I/O.',
-      link: 'https://analise-query.vercel.app/',
+      link: 'https://dba-boost.vercel.app/',
       color: 'from-green-500 to-green-600',
       isExternal: true
     },
