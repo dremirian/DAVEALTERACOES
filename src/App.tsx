@@ -63,13 +63,6 @@ function App() {
     }
   };
 
-  return (
-    <div>
-      <button onClick={handleDownloadHealthCheckSQL}>Download Health Check SQL Server</button>
-      <button onClick={handleDownloadHealthCheckPostgres}>Download Health Check PostgreSQL</button>
-    </div>
-  );
-};
 
 
   const tools = [
