@@ -85,7 +85,7 @@ function App() {
           </p>
 
           <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-            Administre melhor, analise mais, evolua sempre..
+            Administre melhor, analise mais, evolua sempre.
           </p>
         </div>
 
