@@ -5,7 +5,7 @@ import { ClipboardList } from 'lucide-react';
 import { Gauge } from 'lucide-react';
 
 function App() {
-  const handleDownloadHealthCheckSQL = async () => {
+  const handleDownloadHealthCheck = async () => {
     const docId = '1HyvcwozYYHXS7-dN2meL-0X0vB9P2_Dm';
     const url = `https://docs.google.com/document/d/${docId}/export?format=docx`;
 
@@ -33,37 +33,6 @@ function App() {
       window.open(docUrl, '_blank');
     }
   };
-
-  const handleDownloadHealthCheckPostgres = async () => {
-    const docId = '1Xs18pGBtb9qCeiZnI3uFlrAhdX_MQ4i7';
-    const url = `https://docs.google.com/document/d/${docId}/export?format=docx`;
-
-    try {
-      const response = await fetch(url, {
-        method: 'GET',
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-        }
-      });
-
-      if (!response.ok) throw new Error('Download failed');
-
-      const blob = await response.blob();
-      const downloadUrl = window.URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = downloadUrl;
-      a.download = 'Health_Check_PostgreSQL.docx';
-      document.body.appendChild(a);
-      a.click();
-      window.URL.revokeObjectURL(downloadUrl);
-      document.body.removeChild(a);
-    } catch (error) {
-      const docUrl = `https://docs.google.com/document/d/${docId}/edit?usp=drive_link`;
-      window.open(docUrl, '_blank');
-    }
-  };
-
-
 
   const tools = [
     {
