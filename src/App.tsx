@@ -180,7 +180,9 @@ function App() {
             Em Breve no DAVE
           </h2>
           lala
-          const tools = [
+          
+        </div>
+const tools = [
     {
       icon: Gauge,
       title: 'Assistente de tuning automático',
@@ -189,9 +191,6 @@ function App() {
       color: 'from-red-500 to-red-600',
       isExternal: true
     }
-          lalala
-        </div>
-
         <div className="text-center">
           <div className="bg-slate-800 rounded-xl p-8 border border-slate-700">
             <h2 className="text-2xl font-bold text-white mb-4">Sobre o DAVE</h2>
