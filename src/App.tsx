@@ -1,8 +1,7 @@
-import { Database, Activity, Link, FileText, Brain, Download } from 'lucide-react';
+import { Database, Activity, Link, FileText, Download } from 'lucide-react';
 import { DaveAssistant } from './components/DaveAssistant';
 import DAVELOGO from './img/DAVELOGO.png';
-import { ClipboardList } from 'lucide-react';
-import { Gauge } from 'lucide-react';
+import { ClipboardList, Gauge } from 'lucide-react';
 
 function App() {
   const handleDownloadHealthCheck = async () => {
@@ -10,13 +9,7 @@ function App() {
     const url = `https://docs.google.com/document/d/${docId}/export?format=docx`;
 
     try {
-      const response = await fetch(url, {
-        method: 'GET',
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-        }
-      });
-
+      const response = await fetch(url);
       if (!response.ok) throw new Error('Download failed');
 
       const blob = await response.blob();
@@ -28,9 +21,8 @@ function App() {
       a.click();
       window.URL.revokeObjectURL(downloadUrl);
       document.body.removeChild(a);
-    } catch (error) {
-      const docUrl = `https://docs.google.com/document/d/${docId}/edit?usp=drive_link`;
-      window.open(docUrl, '_blank');
+    } catch {
+      window.open(`https://docs.google.com/document/d/${docId}/edit?usp=drive_link`, '_blank');
     }
   };
 
@@ -80,10 +72,10 @@ function App() {
       icon: FileText,
       title: 'Health Check PostgreSQL',
       description: 'Modelo em Word para documentar fases de implantação, escopo técnico, cronograma e riscos.',
-      link: null,
+      link: 'EM BREVE',
       color: 'from-yellow-500 to-yellow-600',
       isDownload: true,
-      onDownload: handleDownloadHealthCheck
+      onDownload: null
     }
   ];
 
@@ -116,18 +108,17 @@ function App() {
               {tools.map((tool, index) => {
                 const Icon = tool.icon;
                 const Component = tool.isDownload ? 'button' : 'a';
+                const isComingSoon = tool.link === 'EM BREVE';
                 const props = tool.isDownload
                   ? {
                       onClick: tool.onDownload,
                       type: 'button'
                     }
                   : {
-                      href: tool.link !== 'EM BREVE' ? tool.link : undefined,
+                      href: !isComingSoon ? tool.link : undefined,
                       target: '_blank',
                       rel: 'noopener noreferrer'
                     };
-
-                const isComingSoon = tool.link === 'EM BREVE';
 
                 return (
                   <Component
@@ -151,7 +142,7 @@ function App() {
                         {tool.description}
                       </p>
                       <div className="flex items-center text-cyan-400 text-sm font-semibold">
-                        {tool.isDownload ? (
+                        {tool.isDownload && !isComingSoon ? (
                           <>
                             <Download className="w-4 h-4 mr-2" />
                             Baixar modelo
