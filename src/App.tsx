@@ -179,18 +179,9 @@ function App() {
             <Activity className="w-8 h-8 mr-3 text-cyan-400" />
             Em Breve no DAVE
           </h2>
-          lala
+          
           
         </div>
-const tools = [
-    {
-      icon: Gauge,
-      title: 'Assistente de tuning automático',
-      description: 'Planeje e estime projetos de migração com base em discos, instâncias e bancos de dados.',
-      link: 'EM BREVE',
-      color: 'from-red-500 to-red-600',
-      isExternal: true
-    }
         <div className="text-center">
           <div className="bg-slate-800 rounded-xl p-8 border border-slate-700">
             <h2 className="text-2xl font-bold text-white mb-4">Sobre o DAVE</h2>
