@@ -121,7 +121,7 @@ function App() {
       link: null,
         color: 'from-yellow-500 to-yellow-600',
       isDownload: true,
-      onDownload: handleDownloadHealthCheck
+      onDownload: handleDownloadHealthCheckPostgres
     }
   ];
 
