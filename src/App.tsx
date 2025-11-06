@@ -180,6 +180,15 @@ function App() {
             Em Breve no DAVE
           </h2>
           lalala
+           {
+      icon: Gauge,
+      title: 'Assistente de tuning automático',
+      description: 'Planeje e estime projetos de migração com base em discos, instâncias e bancos de dados.',
+      link: 'EM BREVE',
+      color: 'from-red-500 to-red-600',
+      isExternal: true
+    }
+          lalala
         </div>
 
         <div className="text-center">
