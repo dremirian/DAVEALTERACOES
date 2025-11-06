@@ -173,8 +173,8 @@ function App() {
             })}
           </div>
         </div>
-          
-        </div>
+
+      
         <div className="text-center">
           <div className="bg-slate-800 rounded-xl p-8 border border-slate-700">
             <h2 className="text-2xl font-bold text-white mb-4">Sobre o DAVE</h2>
