@@ -174,23 +174,7 @@ function App() {
           </div>
         </div>
 
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 flex items-center">
-            <Activity className="w-8 h-8 mr-3 text-cyan-400" />
-            Em Breve no DAVE
-          </h2>
-          <div className="bg-slate-800 rounded-xl p-8 border border-slate-700">
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {comingSoon.map((item, index) => (
-                <li key={index} className="flex items-center text-gray-300">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
+       
         <div className="text-center">
           <div className="bg-slate-800 rounded-xl p-8 border border-slate-700">
             <h2 className="text-2xl font-bold text-white mb-4">Sobre o DAVE</h2>
