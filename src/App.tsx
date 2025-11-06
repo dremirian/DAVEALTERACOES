@@ -7,7 +7,7 @@ import { Gauge } from 'lucide-react';
 function App() {
   const handleDownloadHealthCheck = async () => {
     const docId = '1HyvcwozYYHXS7-dN2meL-0X0vB9P2_Dm';
-    const url = https://docs.google.com/document/d/${docId}/export?format=docx;
+   const url = https://docs.google.com/document/d/${docId}/export?format=docx;
 
     try {
       const response = await fetch(url, {
