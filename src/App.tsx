@@ -76,6 +76,11 @@ function App() {
       isDownload: true,
       onDownload: handleDownloadHealthCheck
     },
+         <div className="mb-16">
+          <h2 className="text-3xl font-bold text-white mb-8 flex items-center">
+            <Activity className="w-8 h-8 mr-3 text-cyan-400" />
+            Em Breve no DAVE
+          </h2>
 	{
       icon: FileText,
       title: 'Health Check PostgreSQL',
