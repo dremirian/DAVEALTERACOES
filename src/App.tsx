@@ -1,6 +1,8 @@
 import { Database, Activity, Link, FileText, Brain, Download } from 'lucide-react';
 import { DaveAssistant } from './components/DaveAssistant';
 import DAVELOGO from './img/DAVELOGO.png';
+import { ClipboardList } from 'lucide-react';
+import { Gauge } from 'lucide-react';
 
 function App() {
   const handleDownloadHealthCheck = async () => {
@@ -34,7 +36,7 @@ function App() {
 
   const tools = [
     {
-      icon: Database,
+      icon: ClipboardList,
       title: 'Estimador de Migração SQL Server',
       description: 'Planeje e estime projetos de migração com base em discos, instâncias e bancos de dados.',
       link: 'https://relatoriomigracao.vercel.app/',
@@ -49,12 +51,37 @@ function App() {
       color: 'from-green-500 to-green-600',
       isExternal: true
     },
+	  {
+      icon: Database,
+      title: 'Conversor de scripts SQL Server → PostgreSQL',
+      description: 'Planeje e estime projetos de migração com base em discos, instâncias e bancos de dados.',
+      link: 'EM BREVE',
+      color: 'from-purple-500 to-purple-600',
+      isExternal: true
+    },
+	  {
+      icon: Gauge,
+      title: 'Assistente de tuning automático',
+      description: 'Planeje e estime projetos de migração com base em discos, instâncias e bancos de dados.',
+      link: 'EM BREVE',
+      color: 'from-red-500 to-red-600',
+      isExternal: true
+    },
     {
       icon: FileText,
       title: 'Health Check SQL Server',
       description: 'Modelo em Word para documentar fases de implantação, escopo técnico, cronograma e riscos.',
       link: null,
       color: 'from-orange-500 to-orange-600',
+      isDownload: true,
+      onDownload: handleDownloadHealthCheck
+    },
+	{
+      icon: FileText,
+      title: 'Health Check PostgreSQL',
+      description: 'Modelo em Word para documentar fases de implantação, escopo técnico, cronograma e riscos.',
+      link: null,
+        color: 'from-yellow-500 to-yellow-600',
       isDownload: true,
       onDownload: handleDownloadHealthCheck
     }
@@ -85,7 +112,7 @@ function App() {
           </p>
 
           <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-            Administre melhor, analise mais, evolua sempre.
+            Painel multifuncional para administração, análise e migração de bancos de dados, uma central inteligente e ágil para DBAs.
           </p>
         </div>
 
@@ -116,9 +143,10 @@ function App() {
                   className="group relative bg-slate-800 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 border border-slate-700 hover:border-cyan-400 overflow-hidden cursor-pointer"
                 >
                   <div className={`absolute inset-0 bg-gradient-to-br ${tool.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
-                  <div className="relative z-10">
+                  <div className="relative z-10 text-left">
                     <div className={`inline-flex p-3 rounded-lg bg-gradient-to-br ${tool.color} mb-4`}>
-                      <Icon className="w-6 h-6 text-white" />
+                      <Icon className="w-6 h-6 text-white block shrink-0 align-middle leading-none" />
+
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                       {tool.title}
