@@ -179,8 +179,9 @@ function App() {
             <Activity className="w-8 h-8 mr-3 text-cyan-400" />
             Em Breve no DAVE
           </h2>
-          lalala
-           {
+          lala
+          const tools = [
+    {
       icon: Gauge,
       title: 'Assistente de tuning automático',
       description: 'Planeje e estime projetos de migração com base em discos, instâncias e bancos de dados.',
