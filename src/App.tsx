@@ -96,27 +96,27 @@ function App() {
       <DaveAssistant />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center mb-16">
-            <div className="flex items-center justify-center mb-6">
-              <img src={DAVELOGO} alt="Logo DAVE" className="w-48 h-52" />
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center mb-4">
+              <img src={DAVELOGO} alt="Logo DAVE" className="w-40 h-44" />
             </div>
-            <p className="text-2xl text-cyan-400 mb-4 tracking-wide font-light">
-              <span className="text-white font-bold text-3xl animate-pulse">D</span>atabase 
-              <span className="text-white font-bold text-3xl animate-pulse"> A</span>ssistant 
-              <span className="text-white font-bold text-3xl animate-pulse"> V</span>irtual 
-              <span className="text-white font-bold text-3xl animate-pulse"> E</span>ngine
+            <p className="text-xl text-cyan-400 mb-2 tracking-wide font-light">
+              <span className="text-white font-bold text-2xl animate-pulse">D</span>atabase 
+              <span className="text-white font-bold text-2xl animate-pulse"> A</span>ssistant 
+              <span className="text-white font-bold text-2xl animate-pulse"> V</span>irtual 
+              <span className="text-white font-bold text-2xl animate-pulse"> E</span>ngine
             </p>
-            <p className="text-gray-300 max-w-3xl mx-auto text-lg">
+            <p className="text-gray-300 max-w-2xl mx-auto text-base">
               Administre melhor, analise mais, evolua sempre.
             </p>
           </div>
 
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 flex items-center">
-              <Database className="w-8 h-8 mr-3 text-cyan-400" />
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold text-white mb-6 flex items-center">
+              <Database className="w-6 h-6 mr-2 text-cyan-400" />
               Ferramentas Disponíveis
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {tools.map((tool, index) => {
                 const Icon = tool.icon;
                 const Component = tool.isDownload ? 'button' : 'a';
@@ -129,7 +129,7 @@ function App() {
                   <Component
                     key={index}
                     {...props}
-                    className={`group relative bg-slate-800 rounded-xl p-6 transition-all duration-300 border border-slate-700 overflow-hidden ${
+                    className={`group relative bg-slate-800 rounded-lg p-4 transition-all duration-300 border border-slate-700 overflow-hidden ${
                       isComingSoon
                         ? 'opacity-40 pointer-events-none cursor-default'
                         : 'hover:transform hover:scale-105 hover:border-cyan-400 cursor-pointer'
@@ -137,24 +137,24 @@ function App() {
                   >
                     <div className={`absolute inset-0 bg-gradient-to-br ${tool.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
                     <div className="relative z-10 text-left">
-                      <div className={`inline-flex p-3 rounded-lg bg-gradient-to-br ${tool.color} mb-4`}>
-                        <Icon className="w-6 h-6 text-white" />
+                      <div className={`inline-flex p-2 rounded-md bg-gradient-to-br ${tool.color} mb-2`}>
+                        <Icon className="w-5 h-5 text-white" />
                       </div>
-                      <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                      <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                         {tool.title}
                       </h3>
-                      <p className="text-gray-300 mb-4 text-sm leading-relaxed">{tool.description}</p>
-                      <div className="flex items-center text-cyan-400 text-sm font-semibold">
+                      <p className="text-gray-300 mb-2 text-xs leading-snug">{tool.description}</p>
+                      <div className="flex items-center text-cyan-400 text-xs font-medium">
                         {tool.isDownload && !isComingSoon ? (
                           <>
-                            <Download className="w-4 h-4 mr-2" />
+                            <Download className="w-3 h-3 mr-1" />
                             Baixar modelo
                           </>
                         ) : isComingSoon ? (
-                          <span className="text-xs bg-purple-700 text-white px-2 py-1 rounded">EM BREVE</span>
+                          <span className="text-[10px] bg-purple-700 text-white px-2 py-0.5 rounded">EM BREVE</span>
                         ) : (
                           <>
-                            <Link className="w-4 h-4 mr-2" />
+                            <Link className="w-3 h-3 mr-1" />
                             Abrir ferramenta
                           </>
                         )}
@@ -167,9 +167,9 @@ function App() {
           </div>
 
           <div className="text-center">
-            <div className="bg-slate-800 rounded-xl p-8 border border-slate-700">
-              <h2 className="text-2xl font-bold text-white mb-4">Sobre o DAVE</h2>
-              <p className="text-gray-300 leading-relaxed">
+            <div className="bg-slate-800 rounded-lg p-6 border border-slate-700">
+              <h2 className="text-xl font-bold text-white mb-3">Sobre o DAVE</h2>
+              <p className="text-gray-300 text-sm leading-snug">
                 DAVE foi criado por <span className="text-cyan-400 font-semibold">Andressa Mirian</span> como uma plataforma modular e extensível
                 para facilitar o dia a dia de quem trabalha com dados. Cada ferramenta foi pensada para resolver problemas reais
                 com praticidade e inteligência. Novas funcionalidades serão adicionadas conforme a evolução dos projetos. 
