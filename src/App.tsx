@@ -90,7 +90,7 @@ function App() {
       icon: FileText,
       title: 'Health Check PostgreSQL',
       description: 'Modelo em Word para documentar fases de implantação, escopo técnico, cronograma e riscos.',
-      link: 'EM BREVE',
+      link: null,
       color: 'from-yellow-500 to-yellow-600',
       isDownload: true,
       onDownload: handleDownloadHealthCheckPostgreSQL
