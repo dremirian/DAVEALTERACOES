@@ -27,16 +27,16 @@ function App() {
   const tools = [
     {
       icon: ClipboardList,
-      title: 'Estimador de Migração SQL Server',
-      description: 'Planeje e estime projetos de migração com base em discos, instâncias e bancos de dados.',
+      title: 'MigraTimer',
+      description: 'Estimador de Migração SQL Server | Planeje e estime projetos de migração com base em discos, instâncias e bancos de dados.',
       link: 'https://relatoriomigracao.vercel.app/',
       color: 'from-pink-500 to-pink-600',
       isExternal: true
     },
     {
       icon: Activity,
-      title: 'Analisador de Performance SQL Server',
-      description: 'Compare estatísticas antes e depois da otimização de queries.',
+      title: 'DBABoost',
+      description: 'Analisador de Performance SQL Server | Compare estatísticas antes e depois da otimização de queries.',
       link: 'https://dba-boost.vercel.app/',
       color: 'from-green-500 to-green-600',
       isExternal: true
@@ -44,14 +44,14 @@ function App() {
     {
       icon: RefreshCcw,
       title: 'TurnoLink',
-      description: 'Gestão e visibilidade de tickets entre turnos na operação 24x7.',
+      description: 'Repasse de Ticket | Gestão e visibilidade de tickets entre turnos na operação 24x7.',
       link: 'https://turnolink.vercel.app/',
       color: 'from-blue-500 to-blue-600',
       isExternal: true
     },
     {
       icon: FileText,
-      title: 'Health Check SQL Server',
+      title: 'DBHealth360 SQL Server',
       description: 'Modelo em Word para documentar fases de implantação.',
       color: 'from-orange-500 to-orange-600',
       isDownload: true,
@@ -59,7 +59,7 @@ function App() {
     },
     {
       icon: FileText,
-      title: 'Health Check PostgreSQL',
+      title: 'DBHealth360 PostgreSQL',
       description: 'Modelo em Word para documentar fases de implantação.',
       color: 'from-yellow-500 to-yellow-600',
       isDownload: true,
