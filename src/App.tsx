@@ -35,7 +35,7 @@ function App() {
       title: 'Estimador de Migração SQL Server',
       description: 'Planeje e estime projetos de migração com base em discos, instâncias e bancos de dados.',
       link: 'https://relatoriomigracao.vercel.app/',
-      color: 'from-White-500 to-white-600',
+      color: 'from-white-500 to-white-600',
       isExternal: true
     },
     {
@@ -93,7 +93,7 @@ function App() {
       title: 'Assistente de tuning automático',
       description: 'Planeje e estime projetos de migração com base em discos, instâncias e bancos de dados.',
       link: 'EM BREVE',
-      color: 'from-Brown-500 to-Brown-600',
+      color: 'from-brown-500 to-brown-600',
       isExternal: true
     }
   ];
