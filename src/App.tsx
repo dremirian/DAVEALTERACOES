@@ -44,22 +44,6 @@ function App() {
       color: 'from-green-500 to-green-600',
       isExternal: true
     },
-    {
-      icon: Database,
-      title: 'Conversor de scripts SQL Server → PostgreSQL',
-      description: 'Planeje e estime projetos de migração com base em discos, instâncias e bancos de dados.',
-      link: 'EM BREVE',
-      color: 'from-purple-500 to-purple-600',
-      isExternal: true
-    },
-    {
-      icon: Gauge,
-      title: 'Assistente de tuning automático',
-      description: 'Planeje e estime projetos de migração com base em discos, instâncias e bancos de dados.',
-      link: 'EM BREVE',
-      color: 'from-red-500 to-red-600',
-      isExternal: true
-    },
      {
       icon: RefreshCcw,
       title: 'TurnoLink',
@@ -76,6 +60,22 @@ function App() {
       color: 'from-orange-500 to-orange-600',
       isDownload: true,
       onDownload: handleDownloadHealthCheck
+    },
+    {
+      icon: Database,
+      title: 'Conversor de scripts SQL Server → PostgreSQL',
+      description: 'Planeje e estime projetos de migração com base em discos, instâncias e bancos de dados.',
+      link: 'EM BREVE',
+      color: 'from-purple-500 to-purple-600',
+      isExternal: true
+    },
+    {
+      icon: Gauge,
+      title: 'Assistente de tuning automático',
+      description: 'Planeje e estime projetos de migração com base em discos, instâncias e bancos de dados.',
+      link: 'EM BREVE',
+      color: 'from-red-500 to-red-600',
+      isExternal: true
     },
     {
       icon: FileText,
