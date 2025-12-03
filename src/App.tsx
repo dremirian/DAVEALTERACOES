@@ -60,7 +60,7 @@ function App() {
       isExternal: true
     },
      {
-      icon: RefreshCcw,
+      icon: Gauge,
       title: 'TurnoLink',
       description: 'Plataforma inteligente para gestão e visibilidade de tickets, garantindo repasse eficiente entre turnos na operação 24x7.',
       link: 'https://turnolink.vercel.app/',
