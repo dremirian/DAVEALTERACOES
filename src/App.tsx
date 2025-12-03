@@ -59,6 +59,14 @@ function App() {
       color: 'from-red-500 to-red-600',
       isExternal: true
     },
+     {
+      icon: RefreshCcw,
+      title: 'TurnoLink',
+      description: 'Plataforma inteligente para gestão e visibilidade de tickets, garantindo repasse eficiente entre turnos na operação 24x7.',
+      link: 'https://turnolink.vercel.app/',
+      color: 'from-blue-500 to-blue-600',
+      isExternal: true
+    },
     {
       icon: FileText,
       title: 'Health Check SQL Server',
