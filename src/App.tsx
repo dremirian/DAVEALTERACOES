@@ -2,6 +2,7 @@ import { Database, Activity, Link, FileText, Download } from 'lucide-react';
 import { DaveAssistant } from './components/DaveAssistant';
 import DAVELOGO from './img/DAVELOGO.png';
 import { ClipboardList, Gauge } from 'lucide-react';
+import { ClipboardList, RefreshCcw } from 'lucide-react';
 
 function App() {
   const handleDownloadHealthCheck = async () => {
@@ -60,7 +61,7 @@ function App() {
       isExternal: true
     },
      {
-      icon: Gauge,
+      icon: RefreshCcw,
       title: 'TurnoLink',
       description: 'Plataforma inteligente para gestão e visibilidade de tickets, garantindo repasse eficiente entre turnos na operação 24x7.',
       link: 'https://turnolink.vercel.app/',
