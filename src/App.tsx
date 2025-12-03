@@ -59,7 +59,7 @@ const handleDownloadHealthCheckPostgreSQL = async () => {
       title: 'Estimador de Migração SQL Server',
       description: 'Planeje e estime projetos de migração com base em discos, instâncias e bancos de dados.',
       link: 'https://relatoriomigracao.vercel.app/',
-      color: 'from-white-500 to-white-600',
+      color: 'from-pink-500 to-pink-600',
       isExternal: true
     },
     {
