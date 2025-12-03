@@ -1,4 +1,4 @@
-import { Database, Activity, Link, FileText, Download, ClipboardList, Gauge, RefreshCcw, Heart } from 'lucide-react';
+import { Database, Activity, Link, FileText, Download, ClipboardList, Gauge, RefreshCcw, Heart, Phone } from 'lucide-react';
 import { DaveAssistant } from './components/DaveAssistant';
 import DAVELOGO from './img/DAVELOGO.png';
 
@@ -76,6 +76,14 @@ function App() {
     {
       icon: Database,
       title: 'Conversor de scripts SQL Server → PostgreSQL',
+      description: 'Ferramenta em desenvolvimento.',
+      link: 'EM BREVE',
+      color: 'from-purple-500 to-purple-600',
+      isExternal: true
+    },
+   {
+      icon: Phone,
+      title: 'CoreBridge',
       description: 'Ferramenta em desenvolvimento.',
       link: 'EM BREVE',
       color: 'from-purple-500 to-purple-600',
