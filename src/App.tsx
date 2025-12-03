@@ -3,6 +3,8 @@ import { DaveAssistant } from './components/DaveAssistant';
 import DAVELOGO from './img/DAVELOGO.png';
 import { ClipboardList, Gauge } from 'lucide-react';
 import { ClipboardList, RefreshCcw } from 'lucide-react';
+import { Heart } from "lucide-react";
+
 
 function App() {
   const handleDownloadHealthCheck = async () => {
@@ -76,6 +78,14 @@ function App() {
       description: 'Planeje e estime projetos de migração com base em discos, instâncias e bancos de dados.',
       link: 'EM BREVE',
       color: 'from-purple-500 to-purple-600',
+      isExternal: true
+    },
+    {
+      icon: Heart,
+      title: 'Pulse',
+      description: 'Batimento da operação, mostrando quem está ativo ou ausente.',
+      link: 'EM BREVE',
+      color: 'from-red-500 to-red-600',
       isExternal: true
     },
     {
