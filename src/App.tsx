@@ -29,8 +29,8 @@ function App() {
     }
   };
 /*--------teste*/
-  const handleDownloadHealthCheckPostgreSQL = async () => {
-  const docId = '1Xs18pGbBt9qCeiZnI3uFlrAhdX_MQ417';
+const handleDownloadHealthCheckPostgreSQL = async () => {
+  const docId = '1Xs18pGBtb9qCeiZnI3uFlrAhdX_MQ4i7'; // ID corrigido
   const url = `https://docs.google.com/document/d/${docId}/export?format=docx`;
 
   try {
@@ -50,6 +50,7 @@ function App() {
     window.open(`https://docs.google.com/document/d/${docId}/edit?usp=drive_link`, '_blank');
   }
 };
+
 
   /*--------teste*/
   const tools = [
