@@ -1,38 +1,10 @@
-import { Database, Activity, Link, FileText, Download } from 'lucide-react';
+import { Database, Activity, Link, FileText, Download, ClipboardList, Gauge, RefreshCcw, Heart } from 'lucide-react';
 import { DaveAssistant } from './components/DaveAssistant';
 import DAVELOGO from './img/DAVELOGO.png';
-import { ClipboardList, Gauge } from 'lucide-react';
-import { ClipboardList, RefreshCcw } from 'lucide-react';
-import { Heart } from "lucide-react";
 
-
-function App() {
-  const handleDownloadHealthCheck = async () => {
-    const docId = '1HyvcwozYYHXS7-dN2meL-0X0vB9P2_Dm';
-    const url = `https://docs.google.com/document/d/${docId}/export?format=docx`;
-
-    try {
-      const response = await fetch(url);
-      if (!response.ok) throw new Error('Download failed');
-
-      const blob = await response.blob();
-      const downloadUrl = window.URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = downloadUrl;
-      a.download = 'Health_Check_SQL_Server.docx';
-      document.body.appendChild(a);
-      a.click();
-      window.URL.revokeObjectURL(downloadUrl);
-      document.body.removeChild(a);
-    } catch {
-      window.open(`https://docs.google.com/document/d/${docId}/edit?usp=drive_link`, '_blank');
-    }
-  };
-/*--------teste*/
-const handleDownloadHealthCheckPostgreSQL = async () => {
-  const docId = '1Xs18pGBtb9qCeiZnI3uFlrAhdX_MQ4i7'; // ID corrigido
+// Função genérica para download de documentos
+const handleDownload = async (docId: string, fileName: string) => {
   const url = `https://docs.google.com/document/d/${docId}/export?format=docx`;
-
   try {
     const response = await fetch(url);
     if (!response.ok) throw new Error('Download failed');
@@ -41,18 +13,17 @@ const handleDownloadHealthCheckPostgreSQL = async () => {
     const downloadUrl = window.URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = downloadUrl;
-    a.download = 'Health_Check_PostgreSQL.docx';
+    a.download = fileName;
     document.body.appendChild(a);
     a.click();
     window.URL.revokeObjectURL(downloadUrl);
     document.body.removeChild(a);
-  } catch (e) {
+  } catch {
     window.open(`https://docs.google.com/document/d/${docId}/edit?usp=drive_link`, '_blank');
   }
 };
 
-
-  /*--------teste*/
+function App() {
   const tools = [
     {
       icon: ClipboardList,
@@ -65,15 +36,15 @@ const handleDownloadHealthCheckPostgreSQL = async () => {
     {
       icon: Activity,
       title: 'Analisador de Performance SQL Server',
-      description: 'Compare estatísticas antes e depois da otimização de queries. Ideal para validar melhorias em tempo de execução e I/O.',
+      description: 'Compare estatísticas antes e depois da otimização de queries.',
       link: 'https://dba-boost.vercel.app/',
       color: 'from-green-500 to-green-600',
       isExternal: true
     },
-     {
+    {
       icon: RefreshCcw,
       title: 'TurnoLink',
-      description: 'Plataforma inteligente para gestão e visibilidade de tickets, garantindo repasse eficiente entre turnos na operação 24x7.',
+      description: 'Gestão e visibilidade de tickets entre turnos na operação 24x7.',
       link: 'https://turnolink.vercel.app/',
       color: 'from-blue-500 to-blue-600',
       isExternal: true
@@ -81,25 +52,23 @@ const handleDownloadHealthCheckPostgreSQL = async () => {
     {
       icon: FileText,
       title: 'Health Check SQL Server',
-      description: 'Modelo em Word para documentar fases de implantação, escopo técnico, cronograma e riscos.',
-      link: null,
+      description: 'Modelo em Word para documentar fases de implantação.',
       color: 'from-orange-500 to-orange-600',
       isDownload: true,
-      onDownload: handleDownloadHealthCheck
+      onDownload: () => handleDownload('1HyvcwozYYHXS7-dN2meL-0X0vB9P2_Dm', 'Health_Check_SQL_Server.docx')
     },
-     {
+    {
       icon: FileText,
       title: 'Health Check PostgreSQL',
-      description: 'Modelo em Word para documentar fases de implantação, escopo técnico, cronograma e riscos.',
-      link: null,
+      description: 'Modelo em Word para documentar fases de implantação.',
       color: 'from-yellow-500 to-yellow-600',
       isDownload: true,
-      onDownload: handleDownloadHealthCheckPostgreSQL
+      onDownload: () => handleDownload('1Xs18pGBtb9qCeiZnI3uFlrAhdX_MQ4i7', 'Health_Check_PostgreSQL.docx')
     },
     {
       icon: Database,
       title: 'Conversor de scripts SQL Server → PostgreSQL',
-      description: 'Planeje e estime projetos de migração com base em discos, instâncias e bancos de dados.',
+      description: 'Ferramenta em desenvolvimento.',
       link: 'EM BREVE',
       color: 'from-purple-500 to-purple-600',
       isExternal: true
@@ -115,7 +84,7 @@ const handleDownloadHealthCheckPostgreSQL = async () => {
     {
       icon: Gauge,
       title: 'Assistente de tuning automático',
-      description: 'Planeje e estime projetos de migração com base em discos, instâncias e bancos de dados.',
+      description: 'Ferramenta em desenvolvimento.',
       link: 'EM BREVE',
       color: 'from-brown-500 to-brown-600',
       isExternal: true
@@ -132,10 +101,10 @@ const handleDownloadHealthCheckPostgreSQL = async () => {
               <img src={DAVELOGO} alt="Logo DAVE" className="w-48 h-52" />
             </div>
             <p className="text-2xl text-cyan-400 mb-4 tracking-wide font-light">
-              <span className="text-white font-bold text-3xl animate-pulse">D</span><span className="ml-1">atabase </span>
-              <span className="text-white font-bold text-3xl animate-pulse">A</span><span className="ml-1">ssistant </span>
-              <span className="text-white font-bold text-3xl animate-pulse">V</span><span className="ml-1">irtual </span>
-              <span className="text-white font-bold text-3xl animate-pulse">E</span><span className="ml-1">ngine</span>
+              <span className="text-white font-bold text-3xl animate-pulse">D</span>atabase 
+              <span className="text-white font-bold text-3xl animate-pulse"> A</span>ssistant 
+              <span className="text-white font-bold text-3xl animate-pulse"> V</span>irtual 
+              <span className="text-white font-bold text-3xl animate-pulse"> E</span>ngine
             </p>
             <p className="text-gray-300 max-w-3xl mx-auto text-lg">
               Administre melhor, analise mais, evolua sempre.
@@ -153,15 +122,8 @@ const handleDownloadHealthCheckPostgreSQL = async () => {
                 const Component = tool.isDownload ? 'button' : 'a';
                 const isComingSoon = tool.link === 'EM BREVE';
                 const props = tool.isDownload
-                  ? {
-                      onClick: tool.onDownload,
-                      type: 'button'
-                    }
-                  : {
-                      href: !isComingSoon ? tool.link : undefined,
-                      target: '_blank',
-                      rel: 'noopener noreferrer'
-                    };
+                  ? { onClick: tool.onDownload, type: 'button' }
+                  : { href: !isComingSoon ? tool.link : undefined, target: '_blank', rel: 'noopener noreferrer' };
 
                 return (
                   <Component
@@ -176,14 +138,12 @@ const handleDownloadHealthCheckPostgreSQL = async () => {
                     <div className={`absolute inset-0 bg-gradient-to-br ${tool.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
                     <div className="relative z-10 text-left">
                       <div className={`inline-flex p-3 rounded-lg bg-gradient-to-br ${tool.color} mb-4`}>
-                        <Icon className="w-6 h-6 text-white block shrink-0 align-middle leading-none" />
+                        <Icon className="w-6 h-6 text-white" />
                       </div>
                       <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                         {tool.title}
                       </h3>
-                      <p className="text-gray-300 mb-4 text-sm leading-relaxed">
-                        {tool.description}
-                      </p>
+                      <p className="text-gray-300 mb-4 text-sm leading-relaxed">{tool.description}</p>
                       <div className="flex items-center text-cyan-400 text-sm font-semibold">
                         {tool.isDownload && !isComingSoon ? (
                           <>
@@ -191,9 +151,7 @@ const handleDownloadHealthCheckPostgreSQL = async () => {
                             Baixar modelo
                           </>
                         ) : isComingSoon ? (
-                          <span className="text-xs bg-purple-700 text-white px-2 py-1 rounded">
-                            EM BREVE
-                          </span>
+                          <span className="text-xs bg-purple-700 text-white px-2 py-1 rounded">EM BREVE</span>
                         ) : (
                           <>
                             <Link className="w-4 h-4 mr-2" />
