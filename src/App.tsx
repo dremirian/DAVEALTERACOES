@@ -61,6 +61,15 @@ function App() {
       isDownload: true,
       onDownload: handleDownloadHealthCheck
     },
+     {
+      icon: FileText,
+      title: 'Health Check PostgreSQL',
+      description: 'Modelo em Word para documentar fases de implantação, escopo técnico, cronograma e riscos.',
+      link: 'EM BREVE',
+      color: 'from-yellow-500 to-yellow-600',
+      isDownload: true,
+      onDownload: null
+    },
     {
       icon: Database,
       title: 'Conversor de scripts SQL Server → PostgreSQL',
@@ -76,15 +85,6 @@ function App() {
       link: 'EM BREVE',
       color: 'from-red-500 to-red-600',
       isExternal: true
-    },
-    {
-      icon: FileText,
-      title: 'Health Check PostgreSQL',
-      description: 'Modelo em Word para documentar fases de implantação, escopo técnico, cronograma e riscos.',
-      link: 'EM BREVE',
-      color: 'from-yellow-500 to-yellow-600',
-      isDownload: true,
-      onDownload: null
     }
   ];
 
