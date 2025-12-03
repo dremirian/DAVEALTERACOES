@@ -28,7 +28,7 @@ function App() {
     {
       icon: ClipboardList,
       title: 'MigraTimer',
-      description: 'Estimador de Migração SQL Server | Planeje e estime projetos de migração com base em discos, instâncias e bancos de dados.',
+      description: 'Estimador de Migração SQL Server: Planeje e estime projetos de migração com base em discos, instâncias e bancos de dados.',
       link: 'https://relatoriomigracao.vercel.app/',
       color: 'from-pink-500 to-pink-600',
       isExternal: true
@@ -36,7 +36,7 @@ function App() {
     {
       icon: Activity,
       title: 'DBABoost',
-      description: 'Analisador de Performance SQL Server | Compare estatísticas antes e depois da otimização de queries.',
+      description: 'Analisador de Performance SQL Server: Compare estatísticas antes e depois da otimização de queries.',
       link: 'https://dba-boost.vercel.app/',
       color: 'from-green-500 to-green-600',
       isExternal: true
@@ -44,7 +44,7 @@ function App() {
     {
       icon: RefreshCcw,
       title: 'TurnoLink',
-      description: 'Repasse de Ticket | Gestão e visibilidade de tickets entre turnos na operação 24x7.',
+      description: 'Repasse de Ticket: Gestão e visibilidade de tickets entre turnos na operação 24x7.',
       link: 'https://turnolink.vercel.app/',
       color: 'from-blue-500 to-blue-600',
       isExternal: true
@@ -52,7 +52,7 @@ function App() {
     {
       icon: FileText,
       title: 'DBHealth360 SQL Server',
-      description: 'Modelo em Word para documentar fases de implantação.',
+      description: 'Modelo em Word para documentar a visão completa da saúde do banco.',
       color: 'from-orange-500 to-orange-600',
       isDownload: true,
       onDownload: () => handleDownload('1HyvcwozYYHXS7-dN2meL-0X0vB9P2_Dm', 'Health_Check_SQL_Server.docx')
@@ -60,7 +60,7 @@ function App() {
     {
       icon: FileText,
       title: 'DBHealth360 PostgreSQL',
-      description: 'Modelo em Word para documentar fases de implantação.',
+      description: 'Modelo em Word para documentar a visão completa da saúde do banco.',
       color: 'from-yellow-500 to-yellow-600',
       isDownload: true,
       onDownload: () => handleDownload('1Xs18pGBtb9qCeiZnI3uFlrAhdX_MQ4i7', 'Health_Check_PostgreSQL.docx')
