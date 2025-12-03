@@ -28,7 +28,30 @@ function App() {
       window.open(`https://docs.google.com/document/d/${docId}/edit?usp=drive_link`, '_blank');
     }
   };
+/*--------teste*/
+  const handleDownloadHealthCheckPostgreSQL = async () => {
+  const docId = '1Xs18pGbBt9qCeiZnI3uFlrAhdX_MQ417';
+  const url = `https://docs.google.com/document/d/${docId}/export?format=docx`;
 
+  try {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error('Download failed');
+
+    const blob = await response.blob();
+    const downloadUrl = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = downloadUrl;
+    a.download = 'Health_Check_PostgreSQL.docx';
+    document.body.appendChild(a);
+    a.click();
+    window.URL.revokeObjectURL(downloadUrl);
+    document.body.removeChild(a);
+  } catch (e) {
+    window.open(`https://docs.google.com/document/d/${docId}/edit?usp=drive_link`, '_blank');
+  }
+};
+
+  /*--------teste*/
   const tools = [
     {
       icon: ClipboardList,
@@ -70,7 +93,7 @@ function App() {
       link: 'EM BREVE',
       color: 'from-yellow-500 to-yellow-600',
       isDownload: true,
-      onDownload: null
+      onDownload: handleDownloadHealthCheckPostgreSQL
     },
     {
       icon: Database,
