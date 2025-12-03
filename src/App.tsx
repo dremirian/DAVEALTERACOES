@@ -179,7 +179,7 @@ function App() {
               <p className="text-gray-300 leading-relaxed">
                 DAVE foi criado por <span className="text-cyan-400 font-semibold">Andressa Mirian</span> como uma plataforma modular e extensível
                 para facilitar o dia a dia de quem trabalha com dados. Cada ferramenta foi pensada para resolver problemas reais
-                com praticidade e inteligência. Novas funcionalidades serão adicionadas conforme a evolução dos projetos.
+                com praticidade e inteligência. Novas funcionalidades serão adicionadas conforme a evolução dos projetos. 
               </p>
             </div>
           </div>
