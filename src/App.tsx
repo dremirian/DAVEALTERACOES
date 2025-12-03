@@ -86,7 +86,7 @@ function App() {
       title: 'CoreBridge',
       description: 'Ferramenta em desenvolvimento.',
       link: 'EM BREVE',
-      color: 'from-purple-500 to-purple-600',
+      color: 'from-silver-500 to-silver-600',
       isExternal: true
     },
     {
