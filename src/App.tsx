@@ -66,19 +66,19 @@ function App() {
       onDownload: () => handleDownload('1Xs18pGBtb9qCeiZnI3uFlrAhdX_MQ4i7', 'Health_Check_PostgreSQL.docx')
     },
     {
+      icon: Heart,
+      title: 'Pulse',
+      description: 'Batimento da operação, mostrando quem está ativo ou ausente.',
+      link: 'https://pulsedba.vercel.app/',
+      color: 'from-red-500 to-red-600',
+      isExternal: true
+    },
+    {
       icon: Database,
       title: 'Conversor de scripts SQL Server → PostgreSQL',
       description: 'Ferramenta em desenvolvimento.',
       link: 'EM BREVE',
       color: 'from-purple-500 to-purple-600',
-      isExternal: true
-    },
-    {
-      icon: Heart,
-      title: 'Pulse',
-      description: 'Batimento da operação, mostrando quem está ativo ou ausente.',
-      link: 'EM BREVE',
-      color: 'from-red-500 to-red-600',
       isExternal: true
     },
     {
